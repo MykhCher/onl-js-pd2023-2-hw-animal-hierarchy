@@ -29,10 +29,7 @@ class Mammal extends Animal {
     static maxWeight = 1500;
 
     constructor(age, name, weight, limbAmount) {
-        this.age = age;
-        this.name = name;
-        this.weight = weight;
-        this.limbAmount = limbAmount;
+        super(age, name, weight, limbAmount)
     }
 
     static isMammal(obj) {
@@ -67,10 +64,7 @@ class Fish extends Animal {
     static maxWeight = 20;
 
     constructor(age, name, weight, limbAmount) {
-        this.age = age;
-        this.name = name;
-        this.weight = weight;
-        this.limbAmount = limbAmount;
+        super(age, name, weight, limbAmount)
     }
 
     static isMammal(obj) {
@@ -93,10 +87,7 @@ class Predator extends Mammal {
     static maxWeight = 800;
 
     constructor(age, name, weight, limbAmount) {
-        this.age = age;
-        this.name = name;
-        this.weight = weight;
-        this.limbAmount = limbAmount;
+        super(age, name, weight, limbAmount)
     }
 
     static isPredator(obj) {
@@ -108,10 +99,7 @@ class Whale extends Mammal {
     static maxWeight = 200000;
 
     constructor(age, name, weight, limbAmount) {
-        this.age = age;
-        this.name = name;
-        this.weight = weight;
-        this.limbAmount = limbAmount;
+        super(age, name, weight, limbAmount)
     }
 
     static isWhale(obj) {
@@ -123,10 +111,7 @@ class Primate extends Mammal {
     static maxWeight = 300;
 
     constructor(age, name, weight, limbAmount) {
-        this.age = age;
-        this.name = name;
-        this.weight = weight;
-        this.limbAmount = limbAmount;
+        super(age, name, weight, limbAmount)
     }
 
     static isPrimate(obj) {
@@ -139,10 +124,7 @@ class Dog extends Predator {
     static maxWeight = 70;
 
     constructor(age, name, weight, limbAmount) {
-        this.age = age;
-        this.name = name;
-        this.weight = weight;
-        this.limbAmount = limbAmount;
+        super(age, name, weight, limbAmount)
     }
 
     static isDog(obj) {
@@ -165,10 +147,7 @@ class Dolphin extends Whale {
     static maxWeight = 1500;
 
     constructor(age, name, weight, limbAmount) {
-        this.age = age;
-        this.name = name;
-        this.weight = weight;
-        this.limbAmount = limbAmount;
+        super(age, name, weight, limbAmount)
     }
 
     static isDolphin(obj) {
@@ -191,10 +170,7 @@ class Human extends Primate {
     static maxWeight = 300;
 
     constructor(age, name, weight, limbAmount) {
-        this.age = age;
-        this.name = name;
-        this.weight = weight;
-        this.limbAmount = limbAmount;
+        super(age, name, weight, limbAmount)
     }
 
     static isHuman(obj) {
@@ -244,3 +220,105 @@ const dolphin2 = new Dolphin(5, 'second dolphin', 20, 0);
 
 const human1 = new Human(1, 'first human', 1, 4);
 const human2 = new Human(5, 'second human', 20, 4);
+
+// Test methods output.
+console.log('Testing output:')
+console.log('===========================');
+console.log(animal1);
+console.log(
+  `Values for ${animal1.constructor.name} class representative (${animal1.name}):`
+);
+console.log(`Age: ${animal1.age}`);
+console.log(`Weight: ${animal1.weight}`);
+console.log(`Limbs Amount: ${animal1.limbAmount}`);
+console.log(`Max Age: ${Animal.maxAge}`);
+console.log(`Max Weight: ${Animal.maxWeight}`);
+console.log(`move(): ${animal1.move()}`);
+console.log(`say(): ${animal1.say()}`);
+console.log(`eat(): ${animal1.eat()}`);
+console.log(`isAnimal(): ${Animal.isAnimal(animal1)}`);
+console.log('===========================');
+console.log(mammal2);
+console.log(
+  `Values for ${mammal2.constructor.name} class representative (${mammal2.name}):`
+);
+console.log(`Age: ${mammal2.age}`);
+console.log(`Weight: ${mammal2.weight}`);
+console.log(`Limbs Amount: ${mammal2.limbAmount}`);
+console.log(`Max Age: ${Mammal.maxAge}`);
+console.log(`Max Weight: ${Mammal.maxWeight}`);
+console.log(`move(): ${mammal2.move()}`);
+console.log(`say(): ${mammal2.say()}`);
+console.log(`eat(): ${mammal2.eat()}`);
+console.log(`isMammal(): ${Mammal.isAnimal(mammal2)}`);
+console.log('===========================');
+console.log(bird1);
+console.log(
+  `Values for ${bird1.constructor.name} class representative (${bird1.name}):`
+);
+console.log(`Age: ${bird1.age}`);
+console.log(`Weight: ${bird1.weight}`);
+console.log(`Limbs Amount: ${bird1.limbAmount}`);
+console.log(`Max Age: ${Bird.maxAge}`);
+console.log(`Max Weight: ${Bird.maxWeight}`);
+console.log(`move(): ${bird1.move()}`);
+console.log(`say(): ${bird1.say()}`);
+console.log(`eat(): ${bird1.eat()}`);
+console.log(`isBird(): ${Bird.isAnimal(bird1)}`);
+console.log('===========================');
+console.log(fish2);
+console.log(
+  `Values for ${fish2.constructor.name} class representative (${fish2.name}):`
+);
+console.log(`Age: ${fish2.age}`);
+console.log(`Weight: ${fish2.weight}`);
+console.log(`Limbs Amount: ${fish2.limbAmount}`);
+console.log(`Max Age: ${Fish.maxAge}`);
+console.log(`Max Weight: ${Fish.maxWeight}`);
+console.log(`move(): ${fish2.move()}`);
+console.log(`say(): ${fish2.say()}`);
+console.log(`eat(): ${fish2.eat()}`);
+console.log(`isFish(): ${Fish.isAnimal(fish2)}`);
+console.log('===========================');
+console.log(dog1);
+console.log(
+  `Values for ${dog1.constructor.name} class representative (${dog1.name}):`
+);
+console.log(`Age: $dog12.age}`);
+console.log(`Weight: ${dog1.weight}`);
+console.log(`Limbs Amount: ${dog1.limbAmount}`);
+console.log(`Max Age: ${Dog.maxAge}`);
+console.log(`Max Weight: ${Dog.maxWeight}`);
+console.log(`move(): ${dog1.move()}`);
+console.log(`say(): ${dog1.say()}`);
+console.log(`eat(): ${dog1.eat()}`);
+console.log(`isDog(): ${Dog.isAnimal(dog1)}`);
+console.log('===========================');
+console.log(dolphin2);
+console.log(
+  `Values for ${dolphin2.constructor.name} class representative (${dolphin2.name}):`
+);
+console.log(`Age: ${dolphin2.age}`);
+console.log(`Weight: ${dolphin2.weight}`);
+console.log(`Limbs Amount: ${dolphin2.limbAmount}`);
+console.log(`Max Age: ${Dolphin.maxAge}`);
+console.log(`Max Weight: ${Dolphin.maxWeight}`);
+console.log(`move(): ${dolphin2.move()}`);
+console.log(`say(): ${dolphin2.say()}`);
+console.log(`eat(): ${dolphin2.eat()}`);
+console.log(`isDolphin(): ${Dolphin.isAnimal(dolphin2)}`);
+console.log('===========================');
+console.log(human1);
+console.log(
+  `Values for ${human1.constructor.name} class representative (${human1.name}):`
+);
+console.log(`Age: ${human1.age}`);
+console.log(`Weight: ${human1.weight}`);
+console.log(`Limbs Amount: ${human1.limbAmount}`);
+console.log(`Max Age: ${Human.maxAge}`);
+console.log(`Max Weight: ${Human.maxWeight}`);
+console.log(`move(): ${human1.move()}`);
+console.log(`say(): ${human1.say()}`);
+console.log(`eat(): ${human1.eat()}`);
+console.log(`isHuman(): ${Human.isAnimal(human1)}`);
+console.log('===========================');
