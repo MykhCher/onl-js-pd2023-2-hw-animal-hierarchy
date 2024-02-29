@@ -89,8 +89,8 @@ class Fish extends Animal {
 }
 
 class Predator extends Mammal {
-    static maxAge = 20;
-    static maxWeight = 70;
+    static maxAge = 50;
+    static maxWeight = 800;
 
     constructor(age, name, weight, limbAmount) {
         this.age = age;
@@ -104,8 +104,8 @@ class Predator extends Mammal {
     }
 }
 class Whale extends Mammal {
-    static maxAge = 40;
-    static maxWeight = 1500;
+    static maxAge = 200;
+    static maxWeight = 200000;
 
     constructor(age, name, weight, limbAmount) {
         this.age = age;
@@ -151,7 +151,7 @@ class Dog extends Predator {
 
 
     move() {
-        return `${this.name} runs somewhere on its 4 legs.`;
+        return `${this.name} runs somewhere on its ${this.limbAmount} legs.`;
     }
     say() {
         return `${this.name} barks!`;
@@ -212,3 +212,35 @@ class Human extends Primate {
         return `${this.name} can eat both vegetables and meat.`;
     }
 }
+
+// Create two objects of each class.
+
+const animal1 = new Animal(1, 'first animal', 1, 4);
+const animal2 = new Animal(5, 'second animal', 20, 2);
+
+const mammal1 = new Mammal(2, 'first mammal', 6, 4);
+const mammal2 = new Mammal(15, 'second mammal', 20, 2);
+
+const bird1 = new Bird(1, 'first bird', 1, 4);
+const bird2 = new Bird(2, 'second bird', 5, 4);
+
+const fish1 = new Fish(2, 'first fish', 1, 0);
+const fish2 = new Fish(1, 'second fish', 3, 0);
+
+const predator1 = new Predator(3, 'first predator', 120, 4);
+const predator2 = new Predator(5, 'second predator', 5, 4);
+
+const whale1 = new Whale(20, 'first whale', 1, 0);
+const whale2 = new Whale(50, 'second whale', 20, 0);
+
+const primate1 = new Primate(1, 'first primate', 35, 4);
+const primate2 = new Primate(5, 'second primate', 20, 4);
+
+const dog1 = new Dog(1, 'first dog', 1, 4);
+const dog2 = new Dog(5, 'second dog', 20, 4);
+
+const dolphin1 = new Dolphin(1, 'first dolphin', 1, 0);
+const dolphin2 = new Dolphin(5, 'second dolphin', 20, 0);
+
+const human1 = new Human(1, 'first human', 1, 4);
+const human2 = new Human(5, 'second human', 20, 4);
