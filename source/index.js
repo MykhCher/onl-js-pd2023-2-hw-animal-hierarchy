@@ -67,7 +67,7 @@ class Fish extends Animal {
         super(age, name, weight, limbAmount)
     }
 
-    static isMammal(obj) {
+    static isFish(obj) {
         return obj instanceof this;
     }
 
@@ -322,3 +322,20 @@ console.log(`say(): ${human1.say()}`);
 console.log(`eat(): ${human1.eat()}`);
 console.log(`isHuman(): ${Human.isAnimal(human1)}`);
 console.log('===========================');
+
+// boolean static method output check for Human instance.
+
+console.log('\nChecks for boolean static method output.');
+console.log(`Instance to check:`);
+console.log(human2);
+console.log('Output values:');
+console.log(`isAnimal(): ${Animal.isAnimal(human2)}`);
+console.log(`isMammal(): ${Mammal.isMammal(human2)}`);
+console.log(`isBird(): ${Bird.isBird(human2)}`);
+console.log(`isFish(): ${Fish.isFish(human2)}`);
+console.log(`isPredator(): ${Predator.isPredator(human2)}`);
+console.log(`isWhale(): ${Whale.isWhale(human2)}`);
+console.log(`isPrimate(): ${Primate.isPrimate(human2)}`);
+console.log(`isDog(): ${Dog.isDog(human2)}`);
+console.log(`isDolphin(): ${Dolphin.isDolphin(human2)}`);
+console.log(`isHuman(): ${Human.isHuman(human2)}`);
