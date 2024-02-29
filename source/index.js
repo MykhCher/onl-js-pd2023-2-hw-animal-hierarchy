@@ -1,75 +1,214 @@
 class Animal {
+    static maxAge = 100;
+    static maxWeight = 1500;
+
+    constructor(age, name, weight, limbAmount) {
+        this.age = age;
+        this.name = name;
+        this.weight = weight;
+        this.limbAmount = limbAmount;
+    }
+
+    static isAnimal(obj) {
+        return obj instanceof this;
+    }
+
     move() {
-        return "I head to somewhere.";
+        return `${this.name} head to somewhere.`;
     }
     say() {
-        return "I pass some message.";
+        return `${this.name} pass some message.`;
     }
     eat() {
-        return "I consume something.";
+        return `${this.name} consume something.`;
     }
 }
 
-class Mammal extends Animal {}
+class Mammal extends Animal {
+    static maxAge = 100;
+    static maxWeight = 1500;
+
+    constructor(age, name, weight, limbAmount) {
+        this.age = age;
+        this.name = name;
+        this.weight = weight;
+        this.limbAmount = limbAmount;
+    }
+
+    static isMammal(obj) {
+        return obj instanceof this;
+    }
+}
 
 class Bird extends Animal {
+    static maxAge = 15;
+    static maxWeight = 150;
+
+    static isBird(obj) {
+        return obj instanceof this;
+    }
+
+    constructor(age, name, weight, limbAmount) {
+        super(age, name, weight, limbAmount)
+    }
+
     move() {
-        return "I fly somewhere.";
+        return `${this.name} flies somewhere.`;
     }
     say() {
-        return "I sing! The spring is comming <3";
+        return `${this.name} sings! The spring is comming <3`;
     }
     eat() {
-        return "I eat with my beak.";
+        return `${this.name} eats with its beak.`;
     }
 }
 class Fish extends Animal {
+    static maxAge = 10;
+    static maxWeight = 20;
+
+    constructor(age, name, weight, limbAmount) {
+        this.age = age;
+        this.name = name;
+        this.weight = weight;
+        this.limbAmount = limbAmount;
+    }
+
+    static isMammal(obj) {
+        return obj instanceof this;
+    }
+
     move() {
-        return "I swim somewhere.";
+        return `${this.name} swims somewhere.`;
     }
     say() {
-        return "I remain silent.";
+        return `${this.name} remains silent.`;
     }
     eat() {
-        return "I may eat much, not only plankton.";
+        return `${this.name} may eat much, not only plankton.`;
     }
 }
 
-class Predator extends Mammal {}
-class Whale extends Mammal {}
-class Primate extends Mammal {}
+class Predator extends Mammal {
+    static maxAge = 20;
+    static maxWeight = 70;
+
+    constructor(age, name, weight, limbAmount) {
+        this.age = age;
+        this.name = name;
+        this.weight = weight;
+        this.limbAmount = limbAmount;
+    }
+
+    static isPredator(obj) {
+        return obj instanceof this;
+    }
+}
+class Whale extends Mammal {
+    static maxAge = 40;
+    static maxWeight = 1500;
+
+    constructor(age, name, weight, limbAmount) {
+        this.age = age;
+        this.name = name;
+        this.weight = weight;
+        this.limbAmount = limbAmount;
+    }
+
+    static isWhale(obj) {
+        return obj instanceof this;
+    }
+}
+class Primate extends Mammal {
+    static maxAge = 100;
+    static maxWeight = 300;
+
+    constructor(age, name, weight, limbAmount) {
+        this.age = age;
+        this.name = name;
+        this.weight = weight;
+        this.limbAmount = limbAmount;
+    }
+
+    static isPrimate(obj) {
+        return obj instanceof this;
+    }
+}
 
 class Dog extends Predator {
+    static maxAge = 20;
+    static maxWeight = 70;
+
+    constructor(age, name, weight, limbAmount) {
+        this.age = age;
+        this.name = name;
+        this.weight = weight;
+        this.limbAmount = limbAmount;
+    }
+
+    static isDog(obj) {
+        return obj instanceof this;
+    }
+
+
     move() {
-        return "I run somewhere on my 4 legs.";
+        return `${this.name} runs somewhere on its 4 legs.`;
     }
     say() {
-        return "I bark!";
+        return `${this.name} barks!`;
     }
     eat() {
-        return "I destroy food (and not only food) with my powerful jaws!";
+        return `${this.name} destroy food (and not only food) with its powerful jaws!`;
     }
 }
 class Dolphin extends Whale {
     static maxAge = 40;
+    static maxWeight = 1500;
+
+    constructor(age, name, weight, limbAmount) {
+        this.age = age;
+        this.name = name;
+        this.weight = weight;
+        this.limbAmount = limbAmount;
+    }
+
+    static isDolphin(obj) {
+        return obj instanceof this;
+    }
+
+
     move() {
-        return "I glide across the water";
+        return `${this.name} glides across the water`;
     }
     say() {
-        return "I whistle and click.";
+        return `${this.name} whistles and clicks.`;
     }
     eat() {
-        return "I like hunting fish! (yeah, I am not that cute)";
+        return `${this.name} likes hunting fish!`;
     }
 }
 class Human extends Primate {
+    static maxAge = 100;
+    static maxWeight = 300;
+
+    constructor(age, name, weight, limbAmount) {
+        this.age = age;
+        this.name = name;
+        this.weight = weight;
+        this.limbAmount = limbAmount;
+    }
+
+    static isHuman(obj) {
+        return obj instanceof this;
+    }
+
+
     move() {
-        return "I go somewhere on my 2 legs";
+        return `${this.name} go somewhere on his/shes 2 legs`;
     }
     say() {
-        return "I speak clearly!";
+        return `${this.name} speaks clearly!`;
     }
     eat() {
-        return "I can eat both vegetables and meat.";
+        return `${this.name} can eat both vegetables and meat.`;
     }
 }
